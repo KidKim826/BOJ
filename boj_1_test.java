@@ -1,14 +1,19 @@
 package BOJ;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class boj_1_test {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int A = sc.nextInt();
-		int B = sc.nextInt();
+		String[] str = br.readLine().split(" ");
 		
-		System.out.println(A-B);
+		int A = Integer.parseInt(str[0]);
+		int B = Integer.parseInt(str[1]);
+		
+		System.out.printf("%.14f", (double)A/B);
 	}
 }
+
